@@ -32,9 +32,9 @@ class BestSellerItem extends StatelessWidget {
                       const Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) => Container(
                     color: Colors.white,
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                       children: const [
+                       children: [
                         Icon(
                           Icons.error,
                           size: 30,

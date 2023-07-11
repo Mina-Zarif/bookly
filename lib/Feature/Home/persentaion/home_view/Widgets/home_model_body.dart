@@ -12,13 +12,13 @@ class HomeModelBody extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * .055),
-      child: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
+      child: const CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 CustomAppBar(),
                 CustomBooksListView(),
                 SizedBox(

@@ -1,16 +1,10 @@
 import 'package:bookly/Feature/Home/persentaion/home_view/Widgets/BestSellerItem.dart';
-import 'package:bookly/Feature/Home/persentaion/home_view/Widgets/Featured_Best_Seller_ListVeiw.dart';
-import 'package:bookly/Feature/Home/persentaion/home_view/Widgets/featured_books_list_view.dart';
-import 'package:bookly/Feature/Home/persentaion/widgets/CustomBookItemShimmer.dart';
 import 'package:bookly/Feature/Search/persentaion/manger/search_cubit.dart';
-import 'package:bookly/Feature/Search/persentaion/manger/search_cubit.dart';
-import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/core/widgets/custom_error.dart';
 import 'package:bookly/core/widgets/custom_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shimmer/shimmer.dart';
 
 class SearchBooksListView extends StatelessWidget {
   const SearchBooksListView({Key? key}) : super(key: key);
@@ -20,7 +14,11 @@ class SearchBooksListView extends StatelessWidget {
     return BlocBuilder<SearchCubit, SearchState>(
       builder: (context, state) {
         if (state is SearchInitial) {
-          return const Center(child: Text("Search.....",style: Styles.textStyle20,));
+          return const Center(
+              child: Text(
+            "Search.....",
+            style: Styles.textStyle20,
+          ));
         }
         if (state is SearchSuccess) {
           return ListView.separated(
