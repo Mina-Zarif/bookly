@@ -1,6 +1,6 @@
 # bookly
 
-A new Flutter project.
+A new Flutter project with MVVM architecture.
 
 ## Screenshots
  
